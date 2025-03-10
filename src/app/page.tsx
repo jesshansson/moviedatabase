@@ -13,17 +13,24 @@ export default async function HomePage() {
 
   return (
     <main className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Popular Movies</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <h1 className="text-3xl lg:text-4xl font-bold font-limelight mb-4 lg:mb-8 text-white text-center">
+        Popular Movies
+      </h1>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
         {movies.map((movie) => (
-          <div key={movie.id} className="border p-4 rounded-lg shadow-lg">
+          <div
+            key={movie.id}
+            className="border p-4 rounded-lg shadow-lg bg-white flex justify-center"
+          >
             <Link href={`/movie/${movie.id}`}>
-              <h2 className="text-lg font-semibold">{movie.title}</h2>
+              <h2 className="text-3xl font-semibold font-zain text-center">
+                {movie.title}
+              </h2>
               {movie.poster_path && (
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                   alt={movie.title}
-                  className="mt-2 h-fit rounded-md"
+                  className="mt-3 rounded-md max-w-48 mx-auto "
                 />
               )}
             </Link>

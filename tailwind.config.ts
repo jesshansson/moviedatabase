@@ -12,6 +12,11 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        limelight: [ "Limelight", "sans-serif"],
+        zain: [ "Zain", "sans-serif"]
+      },
+      
     },
   },
   plugins: [],
