@@ -16,3 +16,15 @@ export const fetchMovieDetails = async (id: string) => {
     }
     return response.json();
   };
+
+  export const searchMovies = async (query: string) => {
+    const response = await fetch(
+      `${BASE_URL}/search/movie?api_key=${API_KEY}&language=en-US&query=${encodeURIComponent(query)}`
+    );
+    if (!response.ok) {
+      throw new Error("Something went wrong while searching for movies");
+    }
+    const data = await response.json();
+    return data.results;
+  };
+  

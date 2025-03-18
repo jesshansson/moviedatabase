@@ -15,7 +15,13 @@ export default async function HomePage() {
     <main className="p-6">
       <h1 className="text-3xl lg:text-4xl font-bold font-limelight mb-4 lg:mb-8 text-white text-center">
         Popular Movies
-      </h1>
+      </h1>{" "}
+      <Link
+        href="/search"
+        className="text-xl block text-center text-blue-400 underline my-4"
+      >
+        Search for a movie
+      </Link>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
         {movies.map((movie) => (
           <div
