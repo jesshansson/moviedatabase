@@ -22,6 +22,12 @@ export default async function HomePage() {
       >
         Search for a movie
       </Link>
+      <Link
+        href="/favorites"
+        className="text-xl block text-center text-blue-400 underline my-4"
+      >
+        Favorites
+      </Link>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
         {movies.map((movie) => (
           <div
